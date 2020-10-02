@@ -4,10 +4,88 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>Oliver Hill</title>
+  <style>
+    body {
+      overflow: hidden;
+    }
+
+    #image {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      margin-top: 5%;
+      width: 60%;
+      height: auto;
+      position: relative;
+    }
+
+    .image-text {
+      color: white;
+    }
+
+    #header-text {
+      position: absolute;
+      bottom: 80%;
+      left: 45%;
+    }
+
+    #lower-text {
+      position: absolute;
+      left: 15%;
+      bottom: 25%;
+      width: 90%;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-content: space-around;
+    }
+
+    ul {
+      list-style-type: none;
+      padding-left: 0;
+    }
+
+    #ds-text {
+      width:85%;
+    }
+
+    #list {
+      display: none;
+    }
+
+    #ds-text:hover #list {
+      display: block;
+    }
+
+    #swe-text {
+      width: 100%;
+    }
+
+    #personal-text {
+      width: 100%;
+    }
+
+  </style>
 </head>
 
 
 <body>
-  <header>Oliver Hill</header>
+  <div id='image'>
+    <img src='./assets/landing_photo.jpg' style='width: 100%; border-radius: 25px;'/>
+    <div class='image-text' id='header-text'><header>Oliver Hill</header></div>
+    <div id='lower-text'>
+      <div class='image-text' id='ds-text'>
+        <header>Data Scientist</header>
+        <ul id='list'>
+          <li>ARGOS</li>
+          <li>Arboreal AI</li>
+          <li>Ecological Networks</li>
+          <li>CT-Scan Reconstruction & Manipulation</li>
+        </ul>
+      </div>
+      <div class='image-text' id='swe-text'><header>Software Engineer</header></div>
+      <div class='image-text' id='personal-text'><header>Human</header></div>
+    </div>
+  </div>
 </body>
 
