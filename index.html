@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>Oliver Hill</title>
   <style>
+
     body {
       overflow: hidden;
     }
@@ -13,8 +14,8 @@
       display: block;
       margin-left: auto;
       margin-right: auto;
-      margin-top: 5%;
-      width: 60%;
+      margin-top: 1%;
+      width: 80%;
       height: auto;
       position: relative;
     }
@@ -31,8 +32,8 @@
 
     #lower-text {
       position: absolute;
-      left: 15%;
-      bottom: 25%;
+      left: 5%;
+      bottom: 10%;
       width: 90%;
       display: flex;
       flex-direction: row;
@@ -46,16 +47,51 @@
     }
 
     #ds-text {
-      width:85%;
+      width: 100%;
+    }
+
+    .list-header-text {
+      font-size: 16px;
+      text-align: center;
     }
 
     #list {
+      font-size: 14px;
+    }
+
+    li {
+      margin-bottom: 3px;
+      text-align: center;
+      opacity: 0.5;
+      transition: opacity 0.5s;
+      text-decoration: none;
+      position: relative;
+    }
+
+    li:after {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 0%;
+      border-bottom: 2px solid black;
+      transition: 0.5s;
+    }
+
+    li:hover {
+      opacity: 1;
+    }
+
+    li:hover:after {
+      width: 100%;
+    }
+
+    /* #list {
       display: none;
     }
 
     #ds-text:hover #list {
       display: block;
-    }
+    } */
 
     #swe-text {
       width: 100%;
@@ -75,16 +111,34 @@
     <div class='image-text' id='header-text'><header>Oliver Hill</header></div>
     <div id='lower-text'>
       <div class='image-text' id='ds-text'>
-        <header>Data Scientist</header>
+        <header class='list-header-text'>Data Scientist</header>
         <ul id='list'>
           <li>ARGOS</li>
           <li>Arboreal AI</li>
           <li>Ecological Networks</li>
-          <li>CT-Scan Reconstruction & Manipulation</li>
+          <li>Potatobot</li>
+          <li>CT-Scan Analysis</li>
+          <li>Curiosity</li>
+          <li>Nystagmus</li>
         </ul>
       </div>
-      <div class='image-text' id='swe-text'><header>Software Engineer</header></div>
-      <div class='image-text' id='personal-text'><header>Human</header></div>
+      <div class='image-text' id='swe-text'>
+        <header class='list-header-text'>Software Engineer</header>
+        <ul id='list'>
+          <li>ARGOS</li>
+          <li>Microsoft</li>
+          <li>MVS</li>
+          <li>EECS 281</li>
+        </ul>
+      </div>
+      <div class='image-text' id='personal-text'>
+        <header class='list-header-text'>Personal Projects</header>
+        <ul id='list'>
+          <li>About Me</li>
+          <li>Black Oak</li>
+          <li>Air Quality Modeling</li>
+        </ul>
+      </div>
     </div>
   </div>
 </body>
