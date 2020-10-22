@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Oliver Hill</title>
+  <link href="https://fonts.googleapis.com/css2?family=Alegreya&display=swap" rel="stylesheet"> 
+
+  <style>
+
+        body {
+            font-family: 'Alegreya', serif;
+            overflow: hidden;
+        }
+
+        #image {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 1%;
+            width: 80%;
+            height: auto;
+            position: relative;
+        }
+
+        .image-text {
+            color: white;
+        }
+
+        #header-text {
+            position: absolute;
+            top: 10%;
+            left: 5%;
+            font-size: 24px;
+        }
+
+        #lower-text {
+            position: absolute;
+            left: 5%;
+            top: 25%;
+            bottom: 10%;
+            width: 85%;
+            display: flex;
+            flex-direction: row;
+            justify-content: left;
+            align-content: space-around;
+            color: white;
+            font-size: 20px;
+            overflow-y: auto;
+        }
+
+        .feather-arrow-left {
+            position: absolute;
+            top: 10%;
+            right: 15%;
+            fill: none;
+            stroke: white;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+            cursor: pointer;
+            opacity: 0.5;
+            transition: opacity 0.5s;
+        }
+
+        a:hover {
+            opacity: 1;
+        }
+
+    </style>
+
+    <script language='javascript'>
+        function changeImage(newImageString) {
+
+            // Split the path to identify which image is the current background.
+            let splitPath = document.getElementById('real-image').src.split('/');
+
+            // Change the image.
+            if (newImageString == 'ct') {
+                if (splitPath[splitPath.length - 1] == 'ct-scan.jpg') {
+                    document.getElementById('real-image').src = '../../assets/landing_photo.jpg';
+                }
+                else {
+                    document.getElementById('real-image').src = '../../assets/ct-scan.jpg';
+                }
+            }
+            else if (newImageString == 'take') {
+                if (splitPath[splitPath.length - 1] == 'neural-take.jpg') {
+                    document.getElementById('real-image').src = '../../assets/landing_photo.jpg';
+                }
+                else {
+                    document.getElementById('real-image').src = '../../assets/neural-take.jpg';
+                }
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <div id='image'>
+        <img id='real-image' src='../../assets/landing_photo.jpg' style='width: 100%; border-radius: 25px;'/>
+        <div class='image-text' id='header-text'><header>CT-Scan Analysis</header></div>
+        <a href='../../index.html'>
+            <svg xmlns="http://www.w3.org/2000/svg" 
+                    width="24" 
+                    height="24" 
+                    viewBox="0 0 24 24"
+                    fill="none" 
+                    stroke="white" 
+                    stroke-width="2" 
+                    stroke-linecap="round" 
+                    stroke-linejoin="round" 
+                    class="feather feather-arrow-left">
+                <line x1="19" y1="12" x2="5" y2="12"></line>
+                <polyline points="12 19 5 12 12 5"></polyline>
+            </svg>
+        </a>
+        <div id='lower-text'>
+            <div id='lower-text-container'>
+                <div><p>
+                    At Michigan Aerospace Corporation, one of the major projects I worked on
+                    besides ARGOS involved removing artifacts of nonlinear radiation attenuation
+                    in cone-beam computed tomography (CT) scans for a client company. We had a set of
+                    2D scans from the lower-quality cone-beam imaging device, a set of 2D scans from
+                    the industry-standard imaging device (<a onclick='changeImage("ct")'>example</a>), 
+                    and the 3D scan data from both devices. 
+                </p></div>
+                <div><p>
+                    The part of the project I worked on was attempting to generate labels for the cone-beam images
+                    so that we could train a convolutional neural network to translate from the lower quality 
+                    cone-beam images to the higher quality images. I approached this in several different ways,
+                    but the main problem was that the high quality images were neither matches for the lower quality images,
+                    they were completely different patients. The first approach I used was the neural style transfer algorithm
+                    (<a onclick='changeImage("take")'>here's an image I made of my dog</a> with my implementation of the algorithm).
+                    The idea was that if I could synthesize the "style" in the lower quality images (hopefully the
+                    artifacts that I was trying to remove), I could apply that style to the higher quality images,
+                    and begin to train a neural network to translate between the synthetically lower quality images to
+                    their high quality matches. I could then apply this network to the higher quality images and
+                    (hopefully) get corresponding high quality images with the content of the lower quality images.
+                    There's a lot that could go wrong here - I had to be extremely sensitive to introducing structure
+                    into the images, and about removing structure, as a small change could remove or introduce a tumor.
+                    This approach didn't end up working very well, for the reasons mentioned above, and that the 
+                    style was much more difficult to synthesize than I had expected.
+                </p></div>
+                <div><p>
+                    The next step was to use a generative adverarial network (GAN) to create the labels, this time
+                    for the low quality iamges instead of the high quality images. The "real" data
+                    in the GAN problem formulation was the high quality images, and I substituted the noise that is
+                    traditionally used to condition the generator with the low quality images to encourage the 
+                    generator to begin with that structure. The discriminator then classified between the high
+                    quality images and the generated images that (hopefully) contained the structure of the low
+                    quality images but without the artifacts that I wanted to remove.
+                </p></div>
+                <div><p>
+                    Unfortunately, the project lost funding before I was able to arrive at results with the GAN, even
+                    though I had made some promising movement in the problem.
+                </p></div>
+            </div>
+        </div>
+    </div>
+</body>

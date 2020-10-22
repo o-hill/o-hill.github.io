@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Oliver Hill</title>
+  <link href="https://fonts.googleapis.com/css2?family=Alegreya&display=swap" rel="stylesheet"> 
+
+  <style>
+
+        body {
+            font-family: 'Alegreya', serif;
+            overflow: hidden;
+        }
+
+        #image {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 1%;
+            width: 80%;
+            height: auto;
+            position: relative;
+        }
+
+        .image-text {
+            color: white;
+        }
+
+        #header-text {
+            position: absolute;
+            top: 10%;
+            left: 5%;
+            font-size: 24px;
+        }
+
+        #lower-text {
+            position: absolute;
+            left: 5%;
+            top: 25%;
+            bottom: 10%;
+            width: 85%;
+            display: flex;
+            flex-direction: row;
+            justify-content: left;
+            align-content: space-around;
+            color: white;
+            font-size: 20px;
+            overflow-y: auto;
+        }
+
+        .feather-arrow-left {
+            position: absolute;
+            top: 10%;
+            right: 15%;
+            fill: none;
+            stroke: white;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+            cursor: pointer;
+            opacity: 0.5;
+            transition: opacity 0.5s;
+        }
+
+        a:hover {
+            opacity: 1;
+        }
+
+    </style>
+
+    <script language='javascript'>
+        function changeImage(newImageString) {
+            if (newImageString == 'gb') {
+                document.getElementById('real-image').src = '../../assets/gb-dark.jpg';
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <div id='image'>
+        <img id='real-image' src='../../assets/landing_photo.jpg' style='width: 100%; border-radius: 25px;'/>
+        <div class='image-text' id='header-text'><header>Arboreal AI</header></div>
+        <a href='../../index.html'>
+            <svg xmlns="http://www.w3.org/2000/svg" 
+                    width="24" 
+                    height="24" 
+                    viewBox="0 0 24 24"
+                    fill="none" 
+                    stroke="white" 
+                    stroke-width="2" 
+                    stroke-linecap="round" 
+                    stroke-linejoin="round" 
+                    class="feather feather-arrow-left">
+                <line x1="19" y1="12" x2="5" y2="12"></line>
+                <polyline points="12 19 5 12 12 5"></polyline>
+            </svg>
+        </a>
+        <div id='lower-text'>
+            <div id='lower-text-container'>
+                <div><p>
+                    Arboreal AI is a machine learning and software architecture consultancy
+                    composed of my mentor, Dr. Matthew Lewis, and I. The majority of the work
+                    done in the past was initiating and developing data science products for 
+                    a restaurant technology company.
+                </p></div>
+                <div><p>
+                    Our first project was to research and develop a tool for sentiment analysis
+                    of online restaurant reviews. We leveraged a combination of traditional Natural
+                    Language Processing techniques, as well as a convolutional neural network 
+                    (CNN) architecture. <br/><br/>
+                    
+                    The initial stage of this project was, of course, data cleaning.
+                    Anyone who has ever looked at a restaurant review online understands that they are
+                    not the most grammatically sound publications on the internet. We broke down
+                    the semantic structure of each sentence to separate the dataset into clauses, and
+                    we began predicting the sentiment of each clause. This was quickly limited by the
+                    amount of data we had available, but as more reviews were written the tool became
+                    more and more useful. Another tricky aspect of this project was
+                    applying the predicted sentiment to the correct subject. The difficulty of this
+                    problem is quickly made apparent considering a sentence such as:
+
+                    <b>"The food was slow to arrive."</b>
+
+                    While the subject of the clause is "food", the subject of the criticism is
+                    the service at the restaurant. This was an interesting piece of the problem 
+                    that suprised everyone working on it.
+                </p></div>
+                <div><p>
+                    The second major project that Arboreal AI worked on was wait-time estimation
+                    for customers at restaurants. This is an important piece of the front-end
+                    services rendered by the resturant technology company, as restaurants are
+                    very interested in improving the accuracy of their estimates. Inaccurate
+                    estimates end up turning away potential revenue for the business on both
+                    sides of the inaccuracy. An estimate that is too early is bound to turn away
+                    customers when the time they expected their table at has come and gone, while
+                    estimates that are too late will discourage guests from waiting, even when the
+                    table ends up being available at a time that they would have found acceptable.
+
+                    This problem ended up being quite difficult, as nearly all of the uncertainty
+                    in the estimation lies in the queue. In the end, we delivered a tool that
+                    generated predictions with an accuracy of over 80%, an increase of about 60% accuracy
+                    over traditional human estimates.
+                </p></div>
+            </div>
+        </div>
+    </div>
+</body>

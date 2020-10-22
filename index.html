@@ -58,26 +58,20 @@
     }
 
     .list-header-text {
-      font-size: 16px;
+      font-size: 20px;
       text-align: left;
     }
 
     #list {
-      font-size: 14px;
+      font-size: 16px;
     }
 
     li {
       margin-bottom: 3px;
       text-align: left;
-      opacity: 0.5;
-      transition: opacity 0.5s;
       text-decoration: none;
       position: relative;
       cursor: pointer;
-    }
-
-    li:hover {
-      opacity: 1;
     }
 
     li:hover:after {
@@ -106,6 +100,26 @@
       cursor: inherit;
     }
 
+    #email-text {
+      position: absolute;
+      bottom: 2%;
+      width: 100%;
+      text-align: center;
+      color: white;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+      cursor: pointer;
+      opacity: 0.5;
+      transition: opacity 0.5s;
+    }
+
+    a:hover {
+      opacity: 1;
+    }
+
   </style>
 </head>
 
@@ -119,19 +133,19 @@
         <header class='list-header-text'>Data Scientist</header>
         <ul id='list'>
           <li><a href='./ds/argos/index.html'>ARGOS</a></li>
-          <li>Arboreal AI</li>
-          <li>Ecological Networks</li>
-          <li>Potatobot</li>
-          <li>CT-Scan Analysis</li>
-          <li>Curiosity</li>
-          <li>Nystagmus</li>
+          <li><a href='./ds/arboreal/index.html'>Arboreal AI</a></li>
+          <li><a href='./ds/eco-networks/index.html'>Ecological Networks</a></li>
+          <li><a href='./ds/potatobot/index.html'>Potatobot</a></li>
+          <li><a href='./ds/ct-scan/index.html'>CT-Scan Analysis</a></li>
+          <li><a href='./ds/curiosity/index.html'>Curiosity</a></li>
+          <li><a href='./ds/nystagmus/index.html'>Nystagmus</a></li>
         </ul>
       </div>
       <div class='image-text' id='swe-text'>
         <header class='list-header-text'>Software Engineer</header>
         <ul id='list'>
-          <li>ARGOS</li>
-          <li>Microsoft</li>
+          <li><a href='./swe/argos/index.html'>ARGOS</a></li>
+          <li><a href='./swe/microsoft/index.html'>Microsoft</a></li>
           <li>MVS</li>
           <li>EECS 281</li>
         </ul>
@@ -145,6 +159,7 @@
         </ul>
       </div>
     </div>
+    <div id='email-text'>contact@oliverhill.io — <a href='./assets/website_resume.pdf'>Resume</a></div>
   </div>
 </body>
 
