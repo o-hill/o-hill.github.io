@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Oliver Hill</title>
+  <link href="https://fonts.googleapis.com/css2?family=Alegreya&display=swap" rel="stylesheet"> 
+
+  <style>
+
+        body {
+            font-family: 'Alegreya', serif;
+            overflow: hidden;
+        }
+
+        #image {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 1%;
+            width: 80%;
+            height: auto;
+            position: relative;
+        }
+
+        .image-text {
+            color: white;
+        }
+
+        #header-text {
+            position: absolute;
+            top: 10%;
+            left: 5%;
+            font-size: 24px;
+        }
+
+        #lower-text {
+            position: absolute;
+            left: 5%;
+            top: 25%;
+            bottom: 10%;
+            width: 85%;
+            display: flex;
+            flex-direction: row;
+            justify-content: left;
+            align-content: space-around;
+            color: white;
+            font-size: 20px;
+            overflow-y: auto;
+        }
+
+        .feather-arrow-left {
+            position: absolute;
+            top: 10%;
+            right: 15%;
+            fill: none;
+            stroke: white;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+            cursor: pointer;
+            opacity: 0.5;
+            transition: opacity 0.5s;
+        }
+
+        a:hover {
+            opacity: 1;
+        }
+
+        #email-text {
+            position: absolute;
+            bottom: 2%;
+            width: 100%;
+            text-align: center;
+            color: white;
+        }
+
+    </style>
+
+    <script language='javascript'>
+        function changeImage(newImageString) {
+
+            // Split the path to identify which image is the current background.
+            let splitPath = document.getElementById('real-image').src.split('/');
+
+            // Change the image.
+            if (newImageString == 'ct') {
+                if (splitPath[splitPath.length - 1] == 'ct-scan.jpg') {
+                    document.getElementById('real-image').src = '../../assets/landing_photo.jpg';
+                }
+                else {
+                    document.getElementById('real-image').src = '../../assets/ct-scan.jpg';
+                }
+            }
+            else if (newImageString == 'take') {
+                if (splitPath[splitPath.length - 1] == 'neural-take.jpg') {
+                    document.getElementById('real-image').src = '../../assets/landing_photo.jpg';
+                }
+                else {
+                    document.getElementById('real-image').src = '../../assets/neural-take.jpg';
+                }
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <div id='image'>
+        <img id='real-image' src='../../assets/landing_photo.jpg' style='width: 100%; border-radius: 25px;'/>
+        <div class='image-text' id='header-text'><header>Air Quality Modeling</header></div>
+        <a href='../../index.html'>
+            <svg xmlns="http://www.w3.org/2000/svg" 
+                    width="24" 
+                    height="24" 
+                    viewBox="0 0 24 24"
+                    fill="none" 
+                    stroke="white" 
+                    stroke-width="2" 
+                    stroke-linecap="round" 
+                    stroke-linejoin="round" 
+                    class="feather feather-arrow-left">
+                <line x1="19" y1="12" x2="5" y2="12"></line>
+                <polyline points="12 19 5 12 12 5"></polyline>
+            </svg>
+        </a>
+        <div id='lower-text'>
+            <div id='lower-text-container'>
+                <div><p>
+                    In my senior year of college, I studied air quality modeling with Dr. Sofia Piltz.
+                    This was done through a physics-based approach, as well as a statistical modeling 
+                    approach. In this project I learned a lot about modeling with differential equations,
+                    and the difficulty of modeling complex natural processes. Even attempting to predict the
+                    air  quality three days from now is quite difficult.
+                </p></div>
+                <div><p>
+                    Using a conglomeration of many NOAA datasets, I've taken this project a bit farther myself.
+                    The process of acquiring and cleaning the NOAA data was unlike anything I've  experienced before.
+                    There seems to be no process or standards for the data, and many of the datasets have little to
+                    no desciption of the data in the data files, the only  description existing in natural
+                    language on a page that links to the data, but is not linked from the data. Datasets that 
+                    seem like they would be stored together are often stored in different areas, with datasets from
+                    completely separate projects. All of this makes it very difficult, if not impossible, to programmatically
+                    scrape data. Nevertheless, I succeeded in acquiring many of these datasets and compiling them
+                    into a large datasete that I could use to test and validate models.
+                </p></div>
+                <div><p>
+                    I spent quite a bit of time refining the differential equations models, and had some success there. The
+                    tough part of this project is that there is a large and very important term that is difficult to
+                    find, or even collect, data on. This term is known in the literature as "sources and sinks" and
+                    is used to describe all of the factors that produce particulate emissions, as well as those that
+                    sequester them. This means tracking highway and city traffic, factory emissions, and agricultural
+                    emissions to name a few of the larger factors. It also means understanding the carbon sequestration
+                    in the surrounding area and chemical scrubbing occurring in the atmosphere. All of this adds up
+                    to an incredibly complex and important term that is very difficult to find data on. The conclusion I came to
+                    was that without a large amount of time, or a better dataset, I was going to havee trouble getting
+                    farther in this project.
+                </p></div>
+            </div>
+        </div>
+        <div id='email-text'>contact@oliverhill.io — <a href='../../assets/website_resume.pdf'>Resume</a></div>
+    </div>
+</body>
