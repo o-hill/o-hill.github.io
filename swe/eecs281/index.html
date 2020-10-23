@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Oliver Hill</title>
+  <link href="https://fonts.googleapis.com/css2?family=Alegreya&display=swap" rel="stylesheet"> 
+
+  <style>
+
+        body {
+            font-family: 'Alegreya', serif;
+            overflow: hidden;
+        }
+
+        #image {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 1%;
+            width: 80%;
+            height: auto;
+            position: relative;
+        }
+
+        .image-text {
+            color: white;
+        }
+
+        #header-text {
+            position: absolute;
+            top: 10%;
+            left: 5%;
+            font-size: 24px;
+        }
+
+        #lower-text {
+            position: absolute;
+            left: 5%;
+            top: 25%;
+            bottom: 10%;
+            width: 85%;
+            display: flex;
+            flex-direction: row;
+            justify-content: left;
+            align-content: space-around;
+            color: white;
+            font-size: 20px;
+            overflow-y: auto;
+        }
+
+        .feather-arrow-left {
+            position: absolute;
+            top: 10%;
+            right: 15%;
+            fill: none;
+            stroke: white;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+            cursor: pointer;
+            opacity: 0.5;
+            transition: opacity 0.5s;
+        }
+
+        a:hover {
+            opacity: 1;
+        }
+
+        #email-text {
+            position: absolute;
+            bottom: 2%;
+            width: 100%;
+            text-align: center;
+            color: white;
+        }
+
+    </style>
+
+    <script language='javascript'>
+        function changeImage(newImageString) {
+            return;
+        }
+    </script>
+</head>
+
+<body>
+    <div id='image'>
+        <img id='real-image' src='../../assets/landing_photo.jpg' style='width: 100%; border-radius: 25px;'/>
+        <div class='image-text' id='header-text'><header>EECS 281 Graduate Student Instruction</header></div>
+        <a href='../../index.html'>
+            <svg xmlns="http://www.w3.org/2000/svg" 
+                    width="24" 
+                    height="24" 
+                    viewBox="0 0 24 24"
+                    fill="none" 
+                    stroke="white" 
+                    stroke-width="2" 
+                    stroke-linecap="round" 
+                    stroke-linejoin="round" 
+                    class="feather feather-arrow-left">
+                <line x1="19" y1="12" x2="5" y2="12"></line>
+                <polyline points="12 19 5 12 12 5"></polyline>
+            </svg>
+        </a>
+        <div id='lower-text'>
+            <div id='lower-text-container'>
+                <div><p>
+                    EECS 281 is the traditional Data Structures and Algorithms class at the University
+                    of Michigan. I spent seven semesters teaching this course during my time at the 
+                    university. I learned about how to effectively teach complex problems to students,
+                    and how to organize a staff to enable their best work. I had many roles in the staff,
+                    including course administrator, leader of cheat checking, leader of online forum interactions,
+                    leader of lab, guest lecturer, and education researcher.
+                </p></div>
+                <div><p>
+                    I had several different projects during my time on the staff, including analyzing how
+                    to make computing education more egalitarian. Changes have been made to lecture slides,
+                    labs, projects, and staff behavior to encourage diversity in the class, and more broadly, 
+                    in the department. These changes were made through both qualitative and quantitative 
+                    reasoning about course material as we solicit plenty of feedback from the student body 
+                    which ranges from 700 to 1000 students per semester.
+                </p></div>
+            </div>
+        </div>
+        <div id='email-text'>contact@oliverhill.io — <a href='../../assets/website_resume.pdf'>Resume</a></div>
+    </div>
+</body>

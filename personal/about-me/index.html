@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Oliver Hill</title>
+  <link href="https://fonts.googleapis.com/css2?family=Alegreya&display=swap" rel="stylesheet"> 
+
+  <style>
+
+        body {
+            font-family: 'Alegreya', serif;
+            overflow: hidden;
+        }
+
+        #image {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 1%;
+            width: 80%;
+            height: auto;
+            position: relative;
+        }
+
+        .image-text {
+            color: white;
+        }
+
+        #header-text {
+            position: absolute;
+            top: 10%;
+            left: 5%;
+            font-size: 24px;
+        }
+
+        #lower-text {
+            position: absolute;
+            left: 5%;
+            top: 23%;
+            bottom: 27%;
+            width: 85%;
+            display: flex;
+            flex-direction: row;
+            justify-content: left;
+            align-content: space-around;
+            color: white;
+            font-size: 20px;
+            overflow-y: auto;
+        }
+
+        .feather-arrow-left {
+            position: absolute;
+            top: 10%;
+            right: 15%;
+            fill: none;
+            stroke: white;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+            cursor: pointer;
+            opacity: 0.5;
+            transition: opacity 0.5s;
+        }
+
+        a:hover {
+            opacity: 1;
+        }
+
+        #profile-div {
+            position: absolute;
+            bottom: 5%;
+            width: 100%;
+            left: 45%;
+        }
+
+        #profile-image {
+            border-radius: 50%;
+            max-width: 12%;
+        }
+
+        #email-text {
+            position: absolute;
+            bottom: 2%;
+            width: 100%;
+            text-align: center;
+            color: white;
+        }
+
+    </style>
+
+    <script language='javascript'>
+        function changeImage(newImageString) {
+            return;
+        }
+    </script>
+</head>
+
+<body>
+    <div id='image'>
+        <img id='real-image' src='../../assets/landing_photo.jpg' style='width: 100%; border-radius: 25px;'/>
+        <div class='image-text' id='header-text'><header>About Me</header></div>
+        <div id='profile-div'><img id='profile-image' src='../../assets/profile.jpg'/></div>
+        <a href='../../index.html'>
+            <svg xmlns="http://www.w3.org/2000/svg" 
+                    width="24" 
+                    height="24" 
+                    viewBox="0 0 24 24"
+                    fill="none" 
+                    stroke="white" 
+                    stroke-width="2" 
+                    stroke-linecap="round" 
+                    stroke-linejoin="round" 
+                    class="feather feather-arrow-left">
+                <line x1="19" y1="12" x2="5" y2="12"></line>
+                <polyline points="12 19 5 12 12 5"></polyline>
+            </svg>
+        </a>
+        <div id='lower-text'>
+            <div id='lower-text-container'>
+                <div><p>
+                    I grew up in Ann Arbor, Michigan with two dogs, three cats, and no tv. After I graduated
+                    from Community High School (go Rainbow Zebras!) I was financially independent for two years
+                    during which I worked in Ann Arbor, then moved to Colorado to play in a band, rock climb,
+                    and ski while working as a janitor at Whole Foods. I returned to Ann Arbor to start school at
+                    the local community college, and transferred to the University of Michigan (Ann Arbor) after 
+                    three semesters. I floated between many majors at U of M, finally settling in Computer Science
+                    and Engineering. My time there was defined by some amazing professors, teaching EECS 281, working
+                    at Michigan Aerospace Corporation, and
+                    meeting some great friends. I worked at Microsoft my "junior" Summer (I ended up taking five years,
+                    so it was actually my senior Summer) and realized that I didn't want to work in corporate tech.
+                    I threw myself into machine learning, statistics, and applied math, which carried me into my
+                    Masters program, also at U of M.
+                </p></div>
+                <div><p>
+                    Between graduating from undergrad and taking classes for my masters program full time, I worked
+                    full-time at Michigan Aerospace Corporation (MAC) in Ann Arbor for two years. This was easily my favorite
+                    job to date. The staff at MAC felt like a family, and I was working on many different projects that
+                    I enjoyed. My mentor at MAC, Dr. Matthew Lewis, is an inspiration and a close friend. I sadly left MAC
+                    to finish my graduate degree and do research at the university.
+                </p></div>
+                <div><p>
+                    In my masters program, I have focused on broadening my skill set from primarily being the software
+                    side of machine learning to having a more holistic understanding of the math and statistics. I've had
+                    more great professors, and I've been lucky enough to do research with Dr. Fernanda Valdovinos, who
+                    is a professor at UC Davis' school of Environmental Science, Economics, and Policy. We are interested
+                    in ecological networks, and the dynamics that govern them. I have also been taking some classes on the
+                    side of my required classes; the one that I've enjoyed the most is a history class titled "Religion
+                    and the Economy before Modernity" with Dr. Hussein Fancy. This class has been an amazing investigation
+                    into the foundational beliefs in our economy and our religions.
+                </p></div>
+                <div><p>
+                    Outside of school and work, I play guitar, cook, ferment things, pickle things, think about stuff,
+                    run, travel, mountain bike, drink water, talk about how many more lights I could have where I'm living,
+                    wander around my neighborhood, worry about the world and who I am, rock climb sometimes although I think
+                    I'm slowly giving it up, hike, think about how old random things are, hang out with my dog, and recently
+                    I've been thinking about making a block print cause it looks like fun! I've been thinking about how different
+                    religions view each other throughout history, and about how modern society seems to value tangibility over
+                    intangibility, creation over experience, and rationality over irrationality. Not sure where that's going.
+                    My favorite book that I've read recently is Infinite Jest, definitely a book that any modern human can 
+                    and should read. Anyways, hit me up if you want to talk!
+                </p></div>
+            </div>
+        </div>
+        <div id='email-text'>contact@oliverhill.io — <a href='../../assets/website_resume.pdf'>Resume</a></div>
+    </div>
+</body>
