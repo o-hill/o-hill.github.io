@@ -23,6 +23,11 @@
             position: relative;
         }
 
+        #real-image {
+            width: 100%;
+            border-radius: 25px;
+        }
+
         .image-text {
             color: white;
         }
@@ -39,7 +44,7 @@
             left: 5%;
             top: 25%;
             bottom: 10%;
-            width: 85%;
+            width: 90%;
             display: flex;
             flex-direction: row;
             justify-content: left;
@@ -51,7 +56,7 @@
 
         .feather-arrow-left {
             position: absolute;
-            top: 10%;
+            top: 10.5%;
             right: 15%;
             fill: none;
             stroke: white;
@@ -75,6 +80,40 @@
             width: 100%;
             text-align: center;
             color: white;
+        }
+
+        @media only screen and (max-width: 600px) {
+            body {
+                margin: 0;
+                height: 100%;
+                overflow-y: scroll;
+            }
+
+            #image {
+                margin: 0;
+                max-width: 100%;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+
+            #real-image {
+                width: 400%;
+                border-radius: 0;
+                margin-right: 100px;
+            }
+
+            #header-text {
+                top: 5%;
+            }
+
+            .feather-arrow-left {
+                display: none;
+            }
+
+            #lower-text {
+                top: 10%;
+            }
         }
 
     </style>
@@ -108,7 +147,7 @@
 
 <body>
     <div id='image'>
-        <img id='real-image' src='../../assets/landing_photo.jpg' style='width: 100%; border-radius: 25px;'/>
+        <img id='real-image' src='../../assets/landing_photo.jpg'/>
         <div class='image-text' id='header-text'><header>Air Quality Modeling</header></div>
         <a href='../../index.html'>
             <svg xmlns="http://www.w3.org/2000/svg" 
