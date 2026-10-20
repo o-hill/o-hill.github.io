@@ -24,7 +24,7 @@ h1{font-size:1.25rem;font-weight:600;letter-spacing:-.01em}
 h2{font-size:.7rem;font-weight:500;text-transform:uppercase;letter-spacing:.14em;color:var(--faint);display:flex;align-items:center;gap:12px;margin-bottom:28px}
 h2::after{content:"";flex:1;height:1px;background:var(--rule)}
 section{margin-bottom:56px}
-.row{display:grid;grid-template-columns:120px 1fr;gap:20px;margin-bottom:30px}
+.row{display:grid;grid-template-columns:150px 1fr;gap:20px;margin-bottom:30px}
 .when{font-size:.74rem;color:var(--faint);padding-top:3px}
 .what{font-weight:500}
 .what a{border-bottom:1px solid var(--rule);transition:border-color .2s}
@@ -33,7 +33,7 @@ section{margin-bottom:56px}
 .desc{color:var(--soft);font-size:.92rem;margin-top:2px}
 .thumbs{display:flex;gap:10px;margin-top:12px}
 .thumbs img{width:72px;height:72px;object-fit:cover;border-radius:4px}
-.index{display:grid;grid-template-columns:120px 1fr;gap:6px 20px;font-size:.92rem}
+.index{display:grid;grid-template-columns:150px 1fr;gap:6px 20px;font-size:.92rem}
 .index .when{padding-top:2px}
 .index div:nth-child(even) a{color:var(--soft);border-bottom:1px solid var(--rule);margin-right:12px;line-height:2}
 .index div:nth-child(even) a:hover{color:var(--ink);border-color:var(--ink)}
@@ -63,50 +63,51 @@ header img{width:68px;height:68px}
 </div>
 </header>
 
-<p class="intro">Hey, I'm Oliver. I'm an engineer based in Detroit, focused on manufacturing. Before this I built computer vision and ML systems at Michigan Aerospace Corporation, interned on Azure Networking at Microsoft, and did ecological network research at the University of Michigan.</p>
+<p class="intro">I build software for the physical world, from laser systems for aerospace flight testing to a national timber-traceability system for Gabon. Most recently I was CTO of TestMachine, where our AI security research found a critical vulnerability in hardware wallets securing billions. I'm based in Detroit and focused on manufacturing, energy, and building in America.</p>
 
 <section>
 <h2>Work</h2>
-<div class="row"><div class="when mono">3 years</div><div>
-<p class="what"><a href="swe/argos/">ARGOS, Michigan Aerospace Corporation</a></p>
-<p class="desc">Led software development on Automated RecoGnition Of Species, a microservice stack on Python, Vue.js, MongoDB, Kafka, Docker, Nginx, and GraphQL. Also built the <a href="ds/argos/" style="border-bottom:1px solid var(--rule)">species-detection models</a>: CNNs for drone imagery, plus grid prediction and MCMC for mapping density.</p>
+<div class="row"><div class="when mono">May 2022 – Oct 2026</div><div>
+<p class="what">CTO &amp; first employee, TestMachine AI</p>
+<p class="desc">Built an AI security startup from inception to 20 employees. Our AI system, Azimuth, ranked #1 on several public benchmarks and found a critical 0-day in Ledger hardware wallets (privately disclosed, published after the fix). Won a multi-year, seven-figure Coinbase contract and scaled to 150k+ asset analyses per day.</p>
+</div></div>
+<div class="row"><div class="when mono">May – Sep 2026</div><div>
+<p class="what">Co-founder (part-time), Disclose</p>
+<p class="desc">AI-native fintech for political committees and non-profits. Signed pilot customers and $17M in AUM commitments.</p>
+</div></div>
+<div class="row"><div class="when mono">Jan 2021 – Jan 2023</div><div>
+<p class="what">Chief Technology Architect, Environmental Investigation Agency</p>
+<p class="desc">Architected Gabon's national timber-traceability system: 85% of timber volume digitally recorded within two years, with anomaly detection credited with an estimated 72% reduction in fraud. Continued as an advisor afterward.</p>
+</div></div>
+<div class="row"><div class="when mono">Feb 2019 – Oct 2020</div><div>
+<p class="what"><a href="swe/argos/">ML Engineer, Michigan Aerospace Corporation</a></p>
+<p class="desc">Owned the TB-scale data pipeline for HALAS laser weather monitoring, supporting DoD, NASA, and SpaceX flight tests. Built ML for invasive-species detection in drone imagery on <a href="ds/argos/" style="border-bottom:1px solid var(--rule)">ARGOS</a>.</p>
 <div class="thumbs"><img src="ds/argos/gb.jpg" alt=""><img src="assets/gb-dark.jpg" alt=""></div>
 </div></div>
 <div class="row"><div class="when mono">Summer 2018</div><div>
 <p class="what"><a href="swe/microsoft/">Software Engineering Intern, Microsoft</a></p>
-<p class="desc">Azure Networking in Redmond: network debugging tooling and latency-sensitive streaming over IGMP.</p>
-</div></div>
-<div class="row"><div class="when mono">Arboreal AI</div><div>
-<p class="what"><a href="ds/arboreal/">Restaurant wait-time prediction</a></p>
-<p class="desc">Over 80% accuracy, roughly 60% better than human estimates.</p>
-</div></div>
-<div class="row"><div class="when mono">Michigan Aerospace</div><div>
-<p class="what"><a href="ds/nystagmus/">Nystagmus detection</a></p>
-<p class="desc">Real-time pupil-tracking CNN at 45 fps, with a doctor at the University of Michigan hospital.</p>
+<p class="desc">Built a distributed packet-capture system on Azure.</p>
 </div></div>
 </section>
 
 <section>
-<h2>Research &amp; Teaching</h2>
-<div class="row"><div class="when mono">UMich, M.S.</div><div>
-<p class="what"><a href="ds/eco-networks/">Ecological network research</a></p>
-<p class="desc">With Dr. Fernanda Valdovinos, using dynamic systems, complex systems theory, and ML on supercomputing clusters.</p>
+<h2>Education</h2>
+<div class="row"><div class="when mono">Apr 2021</div><div>
+<p class="what">MS, Computer Science &amp; Machine Learning</p>
+<p class="desc">University of Michigan</p>
 </div></div>
-<div class="row"><div class="when mono">UMich, undergrad</div><div>
-<p class="what"><a href="ds/potatobot/">Potatobot</a></p>
-<p class="desc">Senior research project: an NLP bot for answering student questions on EECS course forums.</p>
-</div></div>
-<div class="row"><div class="when mono">UMich</div><div>
-<p class="what"><a href="swe/eecs281/">EECS 281 staff</a></p>
-<p class="desc">Course admin, guest lecturer, and education researcher for a class of 700–1,000 students per semester.</p>
+<div class="row"><div class="when mono">Apr 2019</div><div>
+<p class="what">BSE, Computer Science &amp; Engineering</p>
+<p class="desc">University of Michigan</p>
 </div></div>
 </section>
 
 <section>
-<h2>Index</h2>
+<h2>Research, Teaching &amp; Projects</h2>
 <div class="index">
-<div class="when mono">Data science</div><div><a href="ds/argos/">ARGOS</a><a href="ds/arboreal/">Arboreal AI</a><a href="ds/eco-networks/">Ecological Networks</a><a href="ds/potatobot/">Potatobot</a><a href="ds/ct-scan/">CT-Scan Analysis</a><a href="ds/curiosity/">Curiosity</a><a href="ds/nystagmus/">Nystagmus</a></div>
-<div class="when mono">Software</div><div><a href="swe/argos/">ARGOS</a><a href="swe/microsoft/">Microsoft</a><a href="swe/mvs/">MVS</a><a href="swe/eecs281/">EECS 281</a></div>
+<div class="when mono">Research</div><div><a href="ds/argos/">ARGOS</a><a href="ds/arboreal/">Arboreal AI</a><a href="ds/eco-networks/">Ecological Networks</a><a href="ds/potatobot/">Potatobot</a><a href="ds/ct-scan/">CT-Scan Analysis</a><a href="ds/curiosity/">Curiosity</a><a href="ds/nystagmus/">Nystagmus</a></div>
+<div class="when mono">Software</div><div><a href="swe/argos/">ARGOS</a><a href="swe/microsoft/">Microsoft</a><a href="swe/mvs/">MVS</a></div>
+<div class="when mono">Teaching</div><div><a href="swe/eecs281/">EECS 281</a></div>
 <div class="when mono">Personal</div><div><a href="personal/about-me/">About</a><a href="personal/airquality/">Air Quality</a><a href="personal/blackoak/">Black Oak</a></div>
 </div>
 </section>
