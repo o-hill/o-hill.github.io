@@ -37,6 +37,12 @@ section{margin-bottom:56px}
 .index .when{padding-top:2px}
 .index div:nth-child(even) a{color:var(--soft);border-bottom:1px solid var(--rule);margin-right:12px;line-height:2}
 .index div:nth-child(even) a:hover{color:var(--ink);border-color:var(--ink)}
+.proof{list-style:none;counter-reset:n}
+.proof li{position:relative;padding:14px 0 14px 40px;border-bottom:1px solid var(--rule);color:var(--soft);font-size:.92rem;counter-increment:n}
+.proof li:first-child{border-top:1px solid var(--rule)}
+.proof li::before{content:counter(n,decimal-leading-zero);position:absolute;left:0;top:16px;font-family:'SF Mono',Menlo,Consolas,'Liberation Mono',monospace;font-size:.74rem;color:var(--faint)}
+.proof a{color:var(--ink);border-bottom:1px solid var(--rule)}
+.proof a:hover{border-color:var(--ink)}
 footer{font-size:.74rem;color:var(--faint);border-top:1px solid var(--rule);padding-top:20px;display:flex;justify-content:space-between}
 @media (max-width:600px){
 .wrap{padding:56px 20px 72px}
@@ -67,27 +73,16 @@ header img{width:68px;height:68px}
 
 <section>
 <h2>Work</h2>
-<div class="row"><div class="when mono">May 2022 – Oct 2026</div><div>
-<p class="what">CTO &amp; first employee, TestMachine AI</p>
-<p class="desc">Built an AI security startup from inception to 20 employees. Our AI system, Azimuth, ranked #1 on several public benchmarks and found a critical 0-day in Ledger hardware wallets (privately disclosed, published after the fix). Won a multi-year, seven-figure Coinbase contract and scaled to 150k+ asset analyses per day.</p>
-</div></div>
-<div class="row"><div class="when mono">May – Sep 2026</div><div>
-<p class="what">Co-founder (part-time), Disclose</p>
-<p class="desc">AI-native fintech for political committees and non-profits. Signed pilot customers and $17M in AUM commitments.</p>
-</div></div>
-<div class="row"><div class="when mono">Jan 2021 – Jan 2023</div><div>
-<p class="what">Chief Technology Architect, Environmental Investigation Agency</p>
-<p class="desc">Architected Gabon's national timber-traceability system: 85% of timber volume digitally recorded within two years, with anomaly detection credited with an estimated 72% reduction in fraud. Continued as an advisor afterward.</p>
-</div></div>
-<div class="row"><div class="when mono">Feb 2019 – Oct 2020</div><div>
-<p class="what"><a href="swe/argos/">ML Engineer, Michigan Aerospace Corporation</a></p>
-<p class="desc">Owned the TB-scale data pipeline for HALAS laser weather monitoring, supporting DoD, NASA, and SpaceX flight tests. Built ML for invasive-species detection in drone imagery on <a href="ds/argos/" style="border-bottom:1px solid var(--rule)">ARGOS</a>.</p>
-<div class="thumbs"><img src="ds/argos/gb.jpg" alt=""><img src="assets/gb-dark.jpg" alt=""></div>
-</div></div>
-<div class="row"><div class="when mono">Summer 2018</div><div>
-<p class="what"><a href="swe/microsoft/">Software Engineering Intern, Microsoft</a></p>
-<p class="desc">Built a distributed packet-capture system on Azure.</p>
-</div></div>
+<ol class="proof">
+<li>Built TestMachine AI as CTO and first employee, taking it from inception to 20 employees.</li>
+<li>Our AI system, Azimuth, ranked #1 on several public benchmarks and found a critical 0-day in Ledger hardware wallets (privately disclosed, published after the fix).</li>
+<li>Won a multi-year, seven-figure contract with Coinbase and scaled to 150k+ asset analyses per day.</li>
+<li>Architected Gabon's national timber-traceability system for the Environmental Investigation Agency: 85% of timber volume digitally recorded within two years, with anomaly detection credited with an estimated 72% reduction in fraud.</li>
+<li>Co-founded Disclose, an AI-native fintech for political committees and non-profits, signing pilot customers and $17M in AUM commitments.</li>
+<li>Owned the TB-scale data pipeline for HALAS laser weather monitoring at Michigan Aerospace Corporation, supporting DoD, NASA, and SpaceX flight tests.</li>
+<li>Built ML for invasive-species detection in drone imagery on <a href="ds/argos/">ARGOS</a>.<div class="thumbs"><img src="ds/argos/gb.jpg" alt=""><img src="assets/gb-dark.jpg" alt=""></div></li>
+<li>Built a distributed packet-capture system on Azure as a Software Engineering Intern at <a href="swe/microsoft/">Microsoft</a>.</li>
+</ol>
 </section>
 
 <section>
