@@ -39,11 +39,11 @@ section{margin-bottom:56px}
 .index div:nth-child(even) a{color:var(--soft);border-bottom:1px solid var(--rule);margin-right:12px;line-height:2}
 .index div:nth-child(even) a:hover{color:var(--ink);border-color:var(--ink)}
 .proof{list-style:none;counter-reset:n}
-.proof li{position:relative;padding:14px 0 14px 40px;border-bottom:1px solid var(--rule);color:var(--soft);font-size:.92rem;counter-increment:n}
-.proof li:first-child{border-top:1px solid var(--rule)}
-.proof li::before{content:counter(n,decimal-leading-zero);position:absolute;left:0;top:16px;font-family:'SF Mono',Menlo,Consolas,'Liberation Mono',monospace;font-size:.74rem;color:var(--faint)}
+.proof li{position:relative;padding:9px 0 9px 40px;color:var(--soft);font-size:.92rem;counter-increment:n}
+.proof li::before{content:counter(n,decimal-leading-zero);position:absolute;left:0;top:11px;font-family:'SF Mono',Menlo,Consolas,'Liberation Mono',monospace;font-size:.74rem;color:var(--faint)}
 .proof a{color:var(--ink);border-bottom:1px solid var(--rule)}
 .proof a:hover{border-color:var(--ink)}
+.work h2::after{display:none}
 footer{font-size:.74rem;color:var(--faint);border-top:1px solid var(--rule);padding-top:20px;display:flex;justify-content:space-between}
 @media (max-width:600px){
 .wrap{padding:56px 20px 72px}
@@ -72,7 +72,7 @@ header img{width:96px;height:96px;border-radius:4px}
 
 <p class="intro">I build software for the physical world, from laser systems for aerospace flight testing to a national timber-traceability system for Gabon. Most recently I was CTO of TestMachine, where our AI security research found a critical vulnerability in hardware wallets securing billions. I'm based in Detroit and focused on manufacturing, energy, and building in America.</p>
 
-<section>
+<section class="work">
 <h2>Work</h2>
 <ol class="proof">
 <li>Built TestMachine AI as CTO and first employee, taking it from inception to 20 employees.</li>
