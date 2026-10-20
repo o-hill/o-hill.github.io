@@ -45,6 +45,11 @@ section{margin-bottom:56px}
 .proof{list-style:none;counter-reset:n}
 .proof li{position:relative;padding:9px 0 9px 40px;color:var(--soft);font-size:.92rem;counter-increment:n}
 .proof li::before{content:counter(n,decimal-leading-zero);position:absolute;left:0;top:11px;font-family:'SF Mono',Menlo,Consolas,'Liberation Mono',monospace;font-size:.74rem;color:var(--faint)}
+.ptitle{color:var(--ink);font-weight:600;margin-bottom:2px}
+.proof li{padding-top:12px;padding-bottom:12px}
+.proof li::before{top:14px}
+.edu{color:var(--soft);font-size:.92rem}
+.edu .ptitle{font-weight:600}
 .proof a{color:var(--ink);border-bottom:1px solid var(--rule)}
 .proof a:hover{border-color:var(--ink)}
 h2::after{display:none}
@@ -74,32 +79,22 @@ header img{width:96px;height:96px;border-radius:4px}
 <picture><source srcset="assets/headshot.webp" type="image/webp"><img src="assets/headshot.jpg" alt="Oliver Hill" width="160" height="160"></picture>
 </header>
 
-<p class="intro">I build software for the physical world, from laser systems for aerospace flight testing to a national timber-traceability system for Gabon. Most recently I was CTO of TestMachine, where our AI security research found a critical vulnerability in hardware wallets securing billions. I'm based in Detroit and focused on manufacturing, energy, and building in America.</p>
+<p class="intro">I build and lead teams that put software into the physical world. As CTO and first employee at TestMachine, I grew an AI security startup to 20 people, built its engineering organization, and won and managed a seven-figure contract with Coinbase. Before that, I set up an eight-person team to deliver Gabon's national timber-traceability system, working directly with government officials and operators across the supply chain. I'm based in Detroit and focused on manufacturing, energy, and building in America.</p>
 
-<section class="work">
-<h2>Work</h2>
+<section class="projects">
+<h2>Projects</h2>
 <ol class="proof">
-<li>Built TestMachine AI as CTO and first employee, taking it from inception to 20 employees.</li>
-<li>Our AI system, Azimuth, ranked #1 on several public benchmarks and found a critical 0-day in Ledger hardware wallets (privately disclosed, published after the fix).</li>
-<li>Won a multi-year, seven-figure contract with Coinbase and scaled to 150k+ asset analyses per day.</li>
-<li>Architected Gabon's national timber-traceability system for the Environmental Investigation Agency: 85% of timber volume digitally recorded within two years, with anomaly detection credited with an estimated 72% reduction in fraud.</li>
-<li>Co-founded Disclose, an AI-native fintech for political committees and non-profits, signing pilot customers and $17M in AUM commitments.</li>
-<li>Owned the TB-scale data pipeline for HALAS laser weather monitoring at Michigan Aerospace Corporation, supporting DoD, NASA, and SpaceX flight tests.</li>
-<li>Built ML for invasive-species detection in drone imagery on ARGOS.</li>
-<li>Built a distributed packet-capture system on Azure as a Software Engineering Intern at Microsoft.</li>
+<li><p class="ptitle">TestMachine AI (2022–2026)</p><p>I joined as the first employee and served as CTO, helping raise nearly $7M and growing the company to 20 people. We built AI systems that hunt for security vulnerabilities and then prove they're real by replaying them in a simulated environment, with no AI in the loop. That system, Azimuth, ranked #1 on several public industry benchmarks and found a critical flaw in Ledger hardware wallets, which secure billions in user funds. We disclosed it privately and <a href="https://x.com/testmachine_ai/status/2090954980635164965">published it after the fix shipped</a>.</p></li>
+<li><p class="ptitle">Gabon national timber traceability, Environmental Investigation Agency (2021–2023, advisor since)</p><p>I designed and led a system that tracks every log in Gabon from the forest through sawmills and transport to export, giving businesses and regulators one shared record. I spent a lot of time on the ground with officials and operators. Within two years, 85% of the country's timber volume was recorded digitally, and an anomaly-detection model we built helped cut fraud by an estimated 72%.</p></li>
+<li><p class="ptitle">Disclose (2026, part-time co-founder)</p><p>An AI treasurer for political committees and non-profits. Much of the work was figuring out what AI can do under campaign-finance law and what it can do reliably with today's models. We took it from customer conversations to pilot customers with $17M in assets committed.</p></li>
+<li><p class="ptitle">HALAS laser weather monitoring, Michigan Aerospace (2019–2020)</p><p>I built the data pipeline for a laser system that measures weather conditions up through the thermosphere to support DoD, NASA and SpaceX flight testing. HALAS was later acquired by Honeywell.</p></li>
+<li><p class="ptitle">Drone mapping of invasive species, Michigan Aerospace</p><p>I worked on ML that finds and predicts invasive plant species in aerial drone imagery of wildlife preserves, and led a three-person team that turned it into a tool scientists and land managers could use.</p></li>
 </ol>
 </section>
 
 <section>
 <h2>Education</h2>
-<div class="row"><div class="when mono">Apr 2021</div><div>
-<p class="what">MS, Computer Science &amp; Machine Learning</p>
-<p class="desc">University of Michigan</p>
-</div></div>
-<div class="row"><div class="when mono">Apr 2019</div><div>
-<p class="what">BSE, Computer Science &amp; Engineering</p>
-<p class="desc">University of Michigan</p>
-</div></div>
+<p class="edu"><span class="ptitle">University of Michigan.</span> MS, Computer Science &amp; Machine Learning (2021); BSE, Computer Science &amp; Engineering (2019)</p>
 </section>
 
 
