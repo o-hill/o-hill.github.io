@@ -9,21 +9,23 @@
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
 <link rel="manifest" href="/site.webmanifest">
+<link rel="preload" href="/assets/fonts/MerloOriginal-Regular.woff2" as="font" type="font/woff2" crossorigin>
 <style>
+@font-face{font-family:'Merlo Original';src:url('/assets/fonts/MerloOriginal-Regular.woff2') format('woff2');font-weight:400;font-style:normal;font-display:swap}
+@font-face{font-family:'Merlo Original Italic';src:url('/assets/fonts/MerloOriginal-Italic.woff2') format('woff2');font-weight:400;font-style:normal;font-display:swap}
 :root{--ink:#1c1b19;--soft:#5a5a58;--faint:#9d9d9a;--rule:#e8e8e6;--bg:#ffffff;--pill:#f0f0ef;--accent:#b4532a}
 *{margin:0;padding:0;box-sizing:border-box}
-body{font-family:-apple-system,BlinkMacSystemFont,'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:15px;line-height:1.6;color:var(--ink);background:var(--bg);-webkit-font-smoothing:antialiased}
-.mono{font-family:'SF Mono',Menlo,Consolas,'Liberation Mono',monospace}
+body{font-family:'Merlo Original',Georgia,serif;font-size:15px;line-height:1.6;color:var(--ink);background:var(--bg);-webkit-font-smoothing:antialiased}
 a{color:inherit;text-decoration:none}
 .wrap{max-width:640px;margin:0 auto;padding:88px 24px 96px}
 header{display:flex;align-items:center;gap:22px;margin-bottom:56px}
 header picture{margin-left:auto;flex-shrink:0;display:block}
 header img{display:block;width:160px;height:160px;border-radius:5px;object-fit:cover}
-h1{font-size:1.25rem;font-weight:600;letter-spacing:-.01em}
+h1{font-family:'Merlo Original Italic',Georgia,serif;font-size:1.25rem;font-weight:400;letter-spacing:-.01em}
 .tag{color:var(--soft);font-size:.92rem;margin:2px 0 10px}
 .tag .dot{color:var(--accent)}
 .intro{font-size:1rem;max-width:560px;margin-bottom:16px}
-.co{color:var(--ink);font-weight:600;border-bottom:1px solid #cfcfcc;transition:border-color .2s}
+.co{color:var(--ink);font-weight:400;border-bottom:1px solid #cfcfcc;transition:border-color .2s}
 .co:hover{border-color:var(--ink)}
 .contact button{vertical-align:-.1em;font:inherit;color:var(--faint);cursor:pointer;background:none;border:0;border-radius:.2em;margin-left:0;padding:.15em;display:inline-flex}
 .contact button:hover,.contact button:focus-visible{color:var(--ink)}
