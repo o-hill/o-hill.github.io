@@ -49,7 +49,10 @@ section{margin-bottom:56px}
 .proof li{padding-top:12px;padding-bottom:12px}
 .proof li::before{top:14px}
 .edu{list-style:none;color:var(--soft);font-size:.92rem}
-.edu li{padding:2px 0}
+.edu li{display:grid;grid-template-columns:1fr auto;gap:16px;align-items:baseline;padding:10px 0 0}
+.edu .deg{display:block;color:var(--ink)}
+.edu .field{display:block;color:var(--soft);font-size:.85rem;margin-top:1px}
+.edu .yr{font-size:.74rem;color:var(--faint);font-variant-numeric:tabular-nums;text-align:right}
 .edu .ptitle{font-weight:600}
 .proof a{color:var(--ink);border-bottom:1px solid var(--rule)}
 .proof a:hover{border-color:var(--ink)}
@@ -97,8 +100,8 @@ header img{width:96px;height:96px;border-radius:4px}
 <h2>Education</h2>
 <p class="ptitle">University of Michigan</p>
 <ul class="edu">
-<li>MS, Computer Science &amp; Machine Learning (2021)</li>
-<li>BSE, Computer Science &amp; Engineering (2019)</li>
+<li><div><span class="deg">Master of Science</span><span class="field">Computer Science &amp; Machine Learning</span></div><span class="yr mono">2021</span></li>
+<li><div><span class="deg">Bachelor of Science in Engineering</span><span class="field">Computer Science &amp; Engineering</span></div><span class="yr mono">2019</span></li>
 </ul>
 </section>
 
