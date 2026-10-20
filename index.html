@@ -57,6 +57,8 @@ section{margin-bottom:56px}
 .proof a{color:var(--ink);border-bottom:1px solid var(--rule)}
 .proof a:hover{border-color:var(--ink)}
 h2::after{display:none}
+.co{color:var(--ink);font-weight:600;border-bottom:1px solid #c9c6bf;transition:border-color .2s}
+.co:hover{border-color:var(--ink)}
 footer{font-size:.74rem;color:var(--faint);border-top:1px solid var(--rule);padding-top:20px;display:flex;justify-content:space-between}
 @media (max-width:600px){
 .wrap{padding:56px 20px 72px}
@@ -82,7 +84,7 @@ header img{width:96px;height:96px;border-radius:4px}
 <picture><source srcset="assets/headshot.webp" type="image/webp"><img src="assets/headshot.jpg" alt="Oliver Hill" width="160" height="160"></picture>
 </header>
 
-<p class="intro">I build and lead teams that put software into the physical world. As CTO and first employee at TestMachine, I grew an AI security startup to 20 people, built its engineering organization, and won and managed a seven-figure contract with Coinbase. Before that, I set up an eight-person team to deliver Gabon's national timber-traceability system, working directly with government officials and operators across the supply chain. I'm based in Detroit and focused on manufacturing, energy, and building in America.</p>
+<p class="intro">I build and lead teams that put software into the physical world. I built <a class="co" href="https://testmachine.ai" target="_blank" rel="noopener">TestMachine AI</a> from 0 to 1 as CTO, digitized the Gabonese timber supply chain with <a class="co" href="https://eia.org" target="_blank" rel="noopener">EIA</a>, and built autonomous botanical inventories for American land managers and novel remote sensing solutions for aerospace at <a class="co" href="https://www.michiganaerospace.com" target="_blank" rel="noopener">Michigan Aerospace Corporation</a>. Now I’m drawn to manufacturing, and I want to understand how things actually get made. I’m learning as much as I can reading widely, visiting factories and industrial sites, and speaking with people who make things for a living. If that’s you, I’d like to hear from you.</p>
 
 <section class="projects">
 <h2>Selected Projects</h2>
@@ -90,8 +92,8 @@ header img{width:96px;height:96px;border-radius:4px}
 <li><p class="ptitle">Azimuth</p><p>An agentic application that autonomously hunts for security vulnerabilities and then proves they're real. Azimuth ranks #1 on several public industry benchmarks (including <a href="https://openai.com/index/introducing-evmbench/">EVMbench from OpenAI</a>) and found a critical vulnerability in Ledger hardware wallets, which secure billions in user funds.</p></li>
 <li><p class="ptitle">Gabonese National Timber Traceability System</p><p>I led the implementation of a system that digitized the Gabonese timber supply chain, providing companies and regulators a unified system of record. I worked on the ground with government officials and operators to create a product that worked for everyone.</p></li>
 <li><p class="ptitle">Disclose Finance</p><p>AI-native fintech platform for political committees and non-profits.</p></li>
-<li><p class="ptitle">HALAS</p><p>I built the TB-scale data pipeline for a laser system that measures weather conditions up through the thermosphere to support DoD, NASA and SpaceX flight testing. HALAS was later acquired by Honeywell.</p></li>
-<li><p class="ptitle">ARGOS</p><p>I built and trained a neural network to conduct botanical inventories with autonomous drone flights for American land managers, and led a small team of developers in building the application that brought the tech to the customers.</p></li>
+<li><p class="ptitle">HALAS (High Altitude Lidar Atmospheric Sensing)</p><p>I built the TB-scale data pipeline for a laser system that measures weather conditions up through the thermosphere to support DoD, NASA and SpaceX flight testing. HALAS was later acquired by Honeywell.</p></li>
+<li><p class="ptitle">ARGOS (Automated Recognition of Species)</p><p>I built and trained a neural network to conduct botanical inventories with autonomous drone flights for American land managers, and led a small team of developers in building the application that brought the tech to the customers.</p></li>
 </ol>
 </section>
 
