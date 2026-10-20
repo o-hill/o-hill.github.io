@@ -13,7 +13,8 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Helvetica Neue',Helvetica,Ari
 a{color:inherit;text-decoration:none}
 .wrap{max-width:640px;margin:0 auto;padding:88px 24px 96px}
 header{display:flex;align-items:center;gap:22px;margin-bottom:56px}
-header img{width:84px;height:84px;border-radius:50%;object-fit:cover;flex-shrink:0}
+header picture{margin-left:auto;flex-shrink:0;display:block}
+header img{display:block;width:160px;height:160px;border-radius:5px;object-fit:cover}
 h1{font-size:1.25rem;font-weight:600;letter-spacing:-.01em}
 .tag{color:var(--soft);font-size:.92rem;margin:2px 0 10px}
 .tag .dot{color:var(--accent)}
@@ -47,7 +48,7 @@ footer{font-size:.74rem;color:var(--faint);border-top:1px solid var(--rule);padd
 @media (max-width:600px){
 .wrap{padding:56px 20px 72px}
 header{align-items:flex-start}
-header img{width:68px;height:68px}
+header img{width:96px;height:96px;border-radius:4px}
 .row,.index{grid-template-columns:1fr;gap:2px}
 .row{margin-bottom:26px}
 .index .when{margin-top:12px}
@@ -57,7 +58,6 @@ header img{width:68px;height:68px}
 <body>
 <div class="wrap">
 <header>
-<picture><source srcset="assets/headshot.webp" type="image/webp"><img src="assets/headshot.jpg" alt="Oliver Hill" width="84" height="84"></picture>
 <div>
 <h1>Oliver Hill</h1>
 <p class="tag">Engineer <span class="dot">·</span> Detroit <span class="dot">·</span> Manufacturing</p>
@@ -67,6 +67,7 @@ header img{width:68px;height:68px}
 <li><a href="assets/oliver-hill-resume.pdf">Resume</a></li>
 </ul>
 </div>
+<picture><source srcset="assets/headshot.webp" type="image/webp"><img src="assets/headshot.jpg" alt="Oliver Hill" width="160" height="160"></picture>
 </header>
 
 <p class="intro">I build software for the physical world, from laser systems for aerospace flight testing to a national timber-traceability system for Gabon. Most recently I was CTO of TestMachine, where our AI security research found a critical vulnerability in hardware wallets securing billions. I'm based in Detroit and focused on manufacturing, energy, and building in America.</p>
