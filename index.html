@@ -25,7 +25,8 @@ h1{font-size:1.25rem;font-weight:600;letter-spacing:-.01em}
 .pills{display:flex;flex-wrap:wrap;gap:18px;list-style:none}
 .pills a{font-size:.78rem;color:var(--soft);border-bottom:1px solid #c9c6bf;padding-bottom:1px;transition:color .2s,border-color .2s}
 .pills a:hover{color:var(--ink);border-color:var(--ink)}
-.intro{font-size:1rem;max-width:560px;margin-bottom:64px}
+.intro{font-size:1rem;max-width:560px;margin-bottom:16px}
+header+.intro+.intro{margin-bottom:64px}
 h2{font-size:.7rem;font-weight:500;text-transform:uppercase;letter-spacing:.14em;color:var(--faint);display:flex;align-items:center;gap:12px;margin-bottom:28px}
 h2::after{content:"";flex:1;height:1px;background:var(--rule)}
 section{margin-bottom:56px}
@@ -85,17 +86,18 @@ header img{width:96px;height:96px;border-radius:4px}
 <picture><source srcset="assets/headshot.webp" type="image/webp"><img src="assets/headshot.jpg" alt="Oliver Hill" width="160" height="160"></picture>
 </header>
 
-<p class="intro">I build and lead teams that put software into the physical world. I built <a class="co" href="https://testmachine.ai" target="_blank" rel="noopener">TestMachine AI<img class="logo" src="assets/logo-testmachine.svg" alt="" width="16" height="16"></a> from 0 to 1 as CTO, digitized the Gabonese timber supply chain with <a class="co" href="https://eia.org" target="_blank" rel="noopener">EIA<img class="logo" src="assets/logo-eia.png" alt="" width="16" height="16"></a>, and built autonomous botanical inventories for American land managers and novel remote sensing solutions for aerospace at <a class="co" href="https://www.michiganaerospace.com" target="_blank" rel="noopener">Michigan Aerospace Corporation<img class="logo" src="assets/logo-michiganaerospace.png" alt="" width="16" height="16"></a>. Now I’m drawn to manufacturing, and I want to understand how things actually get made. I’m learning as much as I can reading widely, visiting factories and industrial sites, and speaking with people who make things for a living. If that’s you, I’d like to hear from you.</p>
+<p class="intro">I build and lead teams that put software into the physical world. I built <a class="co" href="https://testmachine.ai" target="_blank" rel="noopener">TestMachine AI<img class="logo" src="assets/logo-testmachine.svg" alt="" width="16" height="16"></a> from 0 to 1 as CTO, digitized the Gabonese timber supply chain with <a class="co" href="https://eia.org" target="_blank" rel="noopener">EIA<img class="logo" src="assets/logo-eia.png" alt="" width="16" height="16"></a>, built autonomous botanical inventories for American land managers and novel remote sensing solutions for aerospace at <a class="co" href="https://www.michiganaerospace.com" target="_blank" rel="noopener">Michigan Aerospace Corporation<img class="logo" src="assets/logo-michiganaerospace.png" alt="" width="16" height="16"></a>, and worked on autonomous glider technology at <a class="co" href="https://www.microsoft.com" target="_blank" rel="noopener">Microsoft<img class="logo" src="assets/logo-microsoft.png" alt="" width="16" height="16"></a>.</p>
+<p class="intro">Now I’m drawn to manufacturing, and I want to understand how things actually get made. I’m learning as much as I can reading widely, visiting factories and industrial sites, and speaking with people who make things for a living. If that’s you, I’d like to hear from you.</p>
 
 <section class="projects">
 <h2>Selected Projects</h2>
 <ol class="proof">
 <li><p class="ptitle">Azimuth</p><p>An agentic application that autonomously hunts for security vulnerabilities and then proves they're real. Azimuth ranks #1 on several public industry benchmarks (including <a href="https://openai.com/index/introducing-evmbench/">EVMbench from OpenAI</a>) and found a critical vulnerability in Ledger hardware wallets, which secure billions in user funds.</p></li>
 <li><p class="ptitle">Ethereum Test Machine</p><p>A large-scale distributed system built primarily in Rust that monitors real-time blockchain transactions and runs state-of-the-art security simulations on the resources affected in the transactions to detect malicious behavior before it affects user funds. Used by the largest exchange in the US to enable and secure their decentralized exchange.</p></li>
-<li><p class="ptitle">Gabonese National Timber Traceability System</p><p>I led the implementation of a system that digitized the Gabonese timber supply chain, providing companies and regulators a unified system of record. I worked on the ground with government officials and operators to create a product that worked for everyone.</p></li>
+<li><p class="ptitle">Gabonese National Timber Traceability System</p><p>A system that digitized the Gabonese timber supply chain, giving companies and regulators a unified system of record. Implemented on the ground with government officials and operators to create a product that worked for everyone.</p></li>
 <li><p class="ptitle">Disclose Finance</p><p>AI-native fintech platform for political committees and non-profits.</p></li>
-<li><p class="ptitle">HALAS (High Altitude Lidar Atmospheric Sensing)</p><p>I built the TB-scale data pipeline for a laser system that measures weather conditions up through the thermosphere to support DoD, NASA and SpaceX flight testing. HALAS was later acquired by Honeywell.</p></li>
-<li><p class="ptitle">ARGOS (Automated Recognition of Species)</p><p>I built and trained a neural network to conduct botanical inventories with autonomous drone flights for American land managers, and led a small team of developers in building the application that brought the tech to the customers.</p></li>
+<li><p class="ptitle">HALAS (High Altitude Lidar Atmospheric Sensing)</p><p>A TB-scale data pipeline for a laser system that measures weather conditions up through the thermosphere to support DoD, NASA and SpaceX flight testing. HALAS was later acquired by Honeywell.</p></li>
+<li><p class="ptitle">ARGOS (Automated Recognition of Species)</p><p>Neural networks trained to conduct botanical inventories from autonomous drone flights for American land managers, plus the application, built by a small development team, that brought the technology to customers.</p></li>
 <li><p class="ptitle">Autonomous Glider Program</p><p>An early reinforcement-learning project at Microsoft to build a glider that keeps itself aloft continuously by learning and leveraging the thermal environment in its target region.</p></li>
 </ol>
 </section>
